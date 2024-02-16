@@ -1,7 +1,12 @@
-import OpenAI from "openai";
-import dotenv from 'dotenv';
-import express, { json } from 'express';
-import cors from 'cors';
+// import OpenAI from "openai";
+// import dotenv from 'dotenv';
+// import express, { json } from 'express';
+// import cors from 'cors';
+// import e from "express";
+const OpenAI = require('openai');
+const dotenv = require('dotenv');
+const express = require('express');
+const cors = require('cors');
 
 dotenv.config();
 
@@ -25,13 +30,13 @@ async function getQuestions(topic, expertise, numQuestions, style) {
     Make sure to format your response as an array with each question being a string value in the array.
     Please do not number the questions.
     Please do not include any other text in the response.`;
-  
+
   // Call OpenAI's completion API
   const completion = await openai.chat.completions.create({
     messages: [{ role: "user", content: prompt }],
     model: "gpt-3.5-turbo",
   });
-  
+
   try {
     // Parse the response and return questions
     return JSON.parse(`{"Questions": ${completion.choices[0].message.content}}`);
@@ -115,3 +120,8 @@ app.get('/evaluation', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
+
+
+
+// Export the app for testing
+module.exports = { getQuestions, getEvaluation, app };
