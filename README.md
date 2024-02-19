@@ -71,3 +71,44 @@ To configure LRNR with your OpenAI API key, follow these steps:
 
 ## License
 LRNR is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute this software in accordance with the terms specified in the license agreement. If you have any questions or suggestions, please reach out to the LRNR development team. Thank you for using LRNR to enhance your learning journey!
+
+Frontend Testing
+To ensure the robustness of the frontend of our application, follow these steps:
+
+Terminal Setup:
+
+Open three terminals to streamline the testing process.
+Navigate to Backend and Frontend Directories:
+
+In one terminal, change directory (cd) into the backend folder.
+In the second terminal, navigate to the frontend directory.
+In the third terminal, also navigate to the frontend directory.
+Code Configuration:
+
+Open server.js file in the backend directory.
+Comment out the const require statement and uncomment the import statement for ES6 compatibility.
+Start Servers:
+
+Initiate the backend and frontend servers by executing npm start in their respective terminals.
+Cypress Test Setup:
+
+In the third terminal (frontend directory), execute npx cypress open to launch the Cypress Test Runner.
+Execute Tests:
+
+Once Cypress Test Runner is open, access the test.cy.js file located in the Cypress/e2e directory to run frontend tests.
+Backend Testing
+To ensure the reliability and functionality of the backend, follow these steps:
+
+Terminal Setup:
+
+Open a terminal to execute backend tests.
+Navigate to Backend Directory:
+
+Change directory (cd) into the backend folder.
+Code Configuration:
+
+Open the necessary file(s) for testing (e.g., server.test.js).
+Comment out the import statement and uncomment the const require statement if necessary.
+Execute Tests:
+
+Run the backend tests by executing npm test server.test.js.
