@@ -72,7 +72,7 @@ To configure LRNR with your OpenAI API key, follow these steps:
 ## License
 LRNR is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute this software in accordance with the terms specified in the license agreement. If you have any questions or suggestions, please reach out to the LRNR development team. Thank you for using LRNR to enhance your learning journey!
 
-Frontend Testing
+##Frontend Testing
 To ensure the robustness of the frontend of our application, follow these steps:
 
 Terminal Setup:
@@ -96,7 +96,8 @@ In the third terminal (frontend directory), execute npx cypress open to launch t
 Execute Tests:
 
 Once Cypress Test Runner is open, access the test.cy.js file located in the Cypress/e2e directory to run frontend tests.
-Backend Testing
+
+##Backend Testing
 To ensure the reliability and functionality of the backend, follow these steps:
 
 Terminal Setup:
